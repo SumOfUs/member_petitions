@@ -1,0 +1,17 @@
+
+type Petition @model {
+  id: ID!
+  name: String!
+  actions: [Action] @connection(name: "PetitionActions")
+}
+type Action @model {
+  id: ID!
+  user: User @connection(name: "UserActions")
+  petition: Petition @connection(name: "PetitionActions")
+}
+type User @model {
+  id: ID!
+  name: String!
+  email: String!
+  actions: [Action] @connection(name: "UserActions")
+}

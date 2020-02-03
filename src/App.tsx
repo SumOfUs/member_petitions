@@ -1,24 +1,36 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Amplify from 'aws-amplify';
+import config from './aws-exports';
+import { Auth } from 'aws-amplify';
+import { CognitoHostedUIIdentityProvider } from "@aws-amplify/auth/lib/types";
+
+Amplify.configure(config);
+
+function checkUser() {
+  Auth.currentAuthenticatedUser()
+    .then(user => console.log({ user }))
+    .catch(err => console.log(err))
+}
+
+function signOut() {
+  Auth.signOut()
+    .then(data => console.log(data))
+    .catch(err => console.log(err))
+}
+
+
+async function facebook() {
+  return await Auth.federatedSignIn({provider: CognitoHostedUIIdentityProvider.Facebook });
+}
+
 
 const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <button onClick={facebook}>Sign In with Facebook</button>
+
+        <button onClick={checkUser}>Check User</button>
+        <button onClick={signOut}>Sign Out</button>
     </div>
   );
 }

@@ -1,0 +1,11 @@
+{
+    "AppSyncApiName": "petitionPlatform",
+    "DynamoDBBillingMode": "PAY_PER_REQUEST",
+    "DynamoDBEnableServerSideEncryption": "false",
+    "AuthCognitoUserPoolId": {
+        "Fn::GetAtt": [
+            "authpetitionplatform902b5a11",
+            "Outputs.UserPoolId"
+        ]
+    }
+}

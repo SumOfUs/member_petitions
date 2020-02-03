@@ -1,0 +1,22 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-petitionplatform-dev-123614-authRole",
+            "UnauthRoleArn": "arn:aws:iam::108409592308:role/amplify-petitionplatform-dev-123614-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::108409592308:role/amplify-petitionplatform-dev-123614-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "amplify-petitionplatform-dev-123614-deployment",
+            "UnauthRoleName": "amplify-petitionplatform-dev-123614-unauthRole",
+            "StackName": "amplify-petitionplatform-dev-123614",
+            "StackId": "arn:aws:cloudformation:us-east-1:108409592308:stack/amplify-petitionplatform-dev-123614/c68d0e80-4681-11ea-bbcc-0a73682547f5",
+            "AmplifyAppId": "d1niut2i0o75r4"
+        },
+        "categories": {
+            "auth": {
+                "petitionplatform902b5a11": {
+                    "hostedUIProviderCreds": "[{\"ProviderName\":\"Facebook\",\"client_id\":\"514456635236116\",\"client_secret\":\"463f222866f2f663b669f8158b21c4a5\"},{\"ProviderName\":\"Google\",\"client_id\":\"743809217474-532h225n9ig2d3tc5b0amkl2n0gthh9j.apps.googleusercontent.com\",\"client_secret\":\"cbxDlTxoMdsiUdl00fTFr_7U\"}]"
+                }
+            }
+        }
+    }
+}
