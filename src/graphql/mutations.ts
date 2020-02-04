@@ -1,3 +1,5 @@
+import { API } from "aws-amplify";
+
 // tslint:disable
 // this is an auto generated file. This will be overwritten
 
@@ -145,6 +147,8 @@ export const createUser = /* GraphQL */ `
     }
   }
 `;
+
+
 export const updateUser = /* GraphQL */ `
   mutation UpdateUser(
     $input: UpdateUserInput!
