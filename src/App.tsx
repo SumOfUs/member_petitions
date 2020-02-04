@@ -27,6 +27,7 @@ async function facebook() {
 const App = () => {
   return (
     <div className="App">
+        <h1>Hello</h1>
         <button onClick={facebook}>Sign In with Facebook</button>
 
         <button onClick={checkUser}>Check User</button>
